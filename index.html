@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WindWave – Harnessing Wind Energy for Smart Cities</title>
+  <meta name="description" content="WindWave: a responsive image gallery and project page on harnessing wind energy for smart cities." />
+  <link rel="stylesheet" href="windwave-styles.css" />
+</head>
+<body>
+
+  <header class="ww-header">
+    <a class="ww-logo" href="#top">Wind<span>Wave</span></a>
+    <nav class="ww-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#how">How it works</a>
+      <a href="#impact">Impact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="ww-hero">
+      <p class="ww-eyebrow">Clean energy · Smart cities</p>
+      <h1>Harnessing wind energy for the cities of tomorrow</h1>
+      <p class="ww-lead">
+        WindWave explores how compact turbines, smart grids and sensors can turn urban
+        wind into reliable, local, carbon-free power.
+      </p>
+      <a class="ww-btn" href="#gallery">View the gallery</a>
+    </section>
+
+    <section id="about" class="ww-section">
+      <h2>Why wind for smart cities?</h2>
+      <div class="ww-cards">
+        <article class="ww-card">
+          <h3>Local generation</h3>
+          <p>Rooftop and vertical-axis turbines produce power right where it is used, cutting transmission losses.</p>
+        </article>
+        <article class="ww-card">
+          <h3>Smart integration</h3>
+          <p>IoT sensors and a smart grid balance wind output with demand, storage and other renewables in real time.</p>
+        </article>
+        <article class="ww-card">
+          <h3>Low carbon</h3>
+          <p>Wind produces electricity with almost no emissions, helping cities reach net-zero targets.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="ww-section">
+      <h2>WindWave responsive image gallery</h2>
+      <p class="ww-sub">Built with CSS Grid – columns and rows adapt to the screen width. Click any image to enlarge it.</p>
+      <div class="ww-gallery" id="wwGallery">
+        <figure><img src="windwave-assets/windwave-img-dawn-field.svg" alt="Wind turbines at dawn" loading="lazy" /><figcaption>Dawn wind field</figcaption></figure>
+        <figure><img src="windwave-assets/windwave-img-smart-rooftop.svg" alt="Rooftop turbines in a smart city" loading="lazy" /><figcaption>Smart rooftop turbines</figcaption></figure>
+        <figure><img src="windwave-assets/windwave-img-offshore-array.svg" alt="Offshore wind farm" loading="lazy" /><figcaption>Offshore array</figcaption></figure>
+        <figure><img src="windwave-assets/windwave-img-night-grid.svg" alt="Smart city grid at night" loading="lazy" /><figcaption>City grid at night</figcaption></figure>
+        <figure><img src="windwave-assets/windwave-img-vertical-axis.svg" alt="Vertical axis wind turbines" loading="lazy" /><figcaption>Vertical-axis turbines</figcaption></figure>
+        <figure><img src="windwave-assets/windwave-img-energy-network.svg" alt="Smart energy network" loading="lazy" /><figcaption>Smart energy network</figcaption></figure>
+        <figure><img src="windwave-assets/windwave-img-green-hills.svg" alt="Turbines on green hills" loading="lazy" /><figcaption>Green hills</figcaption></figure>
+        <figure><img src="windwave-assets/windwave-img-gust-wave.svg" alt="Wind gusts flowing past a turbine" loading="lazy" /><figcaption>Gust waves</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="how" class="ww-section">
+      <h2>How WindWave works</h2>
+      <ol class="ww-steps">
+        <li><strong>Capture</strong> – turbines convert urban wind into electricity.</li>
+        <li><strong>Sense</strong> – sensors track wind speed, direction and output.</li>
+        <li><strong>Balance</strong> – the smart grid routes power to homes, EV chargers and storage.</li>
+        <li><strong>Optimise</strong> – data analytics improve turbine placement and maintenance.</li>
+      </ol>
+    </section>
+
+    <section id="impact" class="ww-section">
+      <h2>Impact at a glance</h2>
+      <div class="ww-stats">
+        <div><span class="ww-num" data-target="40">0</span><small>% less transmission loss</small></div>
+        <div><span class="ww-num" data-target="24">0</span><small>/7 clean power potential</small></div>
+        <div><span class="ww-num" data-target="100">0</span><small>% renewable goal</small></div>
+      </div>
+      <p class="ww-note">Illustrative project figures for a practicum demonstration.</p>
+    </section>
+  </main>
+
+  <footer class="ww-footer">
+    <p>WindWave · Practicum project · Responsive image gallery using CSS Grid</p>
+  </footer>
+
+  <div class="ww-lightbox" id="wwLightbox" aria-hidden="true">
+    <button class="ww-close" id="wwClose" aria-label="Close image">&times;</button>
+    <img id="wwLightboxImg" alt="" />
+  </div>
+
+  <script src="windwave-gallery.js"></script>
+</body>
+</html>

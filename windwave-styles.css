@@ -1,0 +1,107 @@
+:root {
+  --ww-navy: #0b2a4a;
+  --ww-teal: #00a8a8;
+  --ww-sky: #e8f4fb;
+  --ww-ink: #1c2b36;
+  --ww-radius: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  color: var(--ww-ink);
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* Header */
+.ww-header {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: .5rem;
+  padding: .8rem 5%;
+  background: var(--ww-navy);
+}
+.ww-logo { color: #fff; font-weight: 800; font-size: 1.4rem; text-decoration: none; }
+.ww-logo span { color: var(--ww-teal); }
+.ww-nav { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+.ww-nav a { color: #cfe6f5; text-decoration: none; font-size: .95rem; }
+.ww-nav a:hover { color: #fff; }
+
+/* Hero */
+.ww-hero {
+  text-align: center;
+  padding: 5rem 5% 4rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--ww-navy), #046e8f 60%, var(--ww-teal));
+}
+.ww-eyebrow { text-transform: uppercase; letter-spacing: .15em; font-size: .8rem; opacity: .85; }
+.ww-hero h1 { font-size: clamp(1.8rem, 5vw, 3.2rem); max-width: 22ch; margin: .6rem auto 1rem; line-height: 1.2; }
+.ww-lead { max-width: 60ch; margin: 0 auto 1.8rem; opacity: .95; }
+.ww-btn {
+  display: inline-block; padding: .8rem 1.8rem; border-radius: 999px;
+  background: #fff; color: var(--ww-navy); font-weight: 700; text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.ww-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.25); }
+
+/* Sections */
+.ww-section { padding: 3.5rem 5%; max-width: 1200px; margin: 0 auto; }
+.ww-section h2 { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--ww-navy); margin-bottom: .6rem; }
+.ww-sub { margin-bottom: 1.5rem; color: #4a5c69; }
+
+.ww-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin-top: 1.2rem; }
+.ww-card { background: var(--ww-sky); border-radius: var(--ww-radius); padding: 1.4rem; }
+.ww-card h3 { color: var(--ww-navy); margin-bottom: .4rem; }
+
+/* Responsive image gallery (CSS Grid) */
+.ww-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.ww-gallery figure {
+  position: relative; overflow: hidden; border-radius: var(--ww-radius);
+  cursor: pointer; background: var(--ww-sky); aspect-ratio: 4 / 3;
+}
+.ww-gallery img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .4s ease;
+}
+.ww-gallery figure:hover img { transform: scale(1.08); }
+.ww-gallery figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: .5rem .8rem; color: #fff; font-size: .85rem;
+  background: linear-gradient(transparent, rgba(0,0,0,.65));
+  transform: translateY(100%); transition: transform .3s;
+}
+.ww-gallery figure:hover figcaption { transform: translateY(0); }
+
+@media (max-width: 992px) { .ww-gallery { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px) { .ww-gallery { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 380px) { .ww-gallery { grid-template-columns: 1fr; } }
+
+/* Steps */
+.ww-steps { margin: 1rem 0 0 1.2rem; display: grid; gap: .7rem; }
+
+/* Stats */
+.ww-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; text-align: center; }
+.ww-stats div { background: var(--ww-navy); color: #fff; border-radius: var(--ww-radius); padding: 1.6rem 1rem; }
+.ww-num { display: block; font-size: 2.6rem; font-weight: 800; color: var(--ww-teal); }
+.ww-note { margin-top: 1rem; font-size: .85rem; color: #6a7b87; }
+
+/* Footer */
+.ww-footer { text-align: center; padding: 1.8rem 5%; background: var(--ww-navy); color: #cfe6f5; font-size: .9rem; }
+
+/* Lightbox */
+.ww-lightbox {
+  position: fixed; inset: 0; z-index: 50; display: none;
+  align-items: center; justify-content: center;
+  background: rgba(5, 15, 30, .9); padding: 1rem;
+}
+.ww-lightbox.open { display: flex; }
+.ww-lightbox img { max-width: 100%; max-height: 90vh; border-radius: var(--ww-radius); }
+.ww-close {
+  position: absolute; top: 1rem; right: 1.4rem;
+  background: none; border: none; color: #fff; font-size: 2.4rem; cursor: pointer;
+}
